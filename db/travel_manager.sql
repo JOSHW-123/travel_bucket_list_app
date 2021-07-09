@@ -8,3 +8,11 @@ CREATE TABLE cities (
     attractions VARCHAR(255)
 
 )
+
+CREATE TABLE countries (
+    id SERIAL PRIMARY KEY,
+    country_name VARCHAR(255),
+    visited BOOLEAN,
+    popular_destinations VARCHAR(255)
+
+)
