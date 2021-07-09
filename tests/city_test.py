@@ -19,9 +19,6 @@ class TestCity(unittest.TestCase):
     def test_city_temperature(self):
         self.assertEqual("24°", self.berlin.temperature)
 
-    
-
-
     #     self.name = name
     #     self.attractions = attractions
     #     self.temperature = temperature

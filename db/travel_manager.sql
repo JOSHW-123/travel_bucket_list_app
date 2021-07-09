@@ -6,7 +6,7 @@ CREATE TABLE countries (
     id SERIAL PRIMARY KEY,
     country_name VARCHAR(255),
     capital_city VARCHAR(255),
-    country_population INT,
+    country_population VARCHAR(255),
     country_language VARCHAR(255),
     currency VARCHAR(255),
     visited BOOLEAN

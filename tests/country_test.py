@@ -25,7 +25,6 @@ class TestCountry(unittest.TestCase):
     def test_country_currency(self):
         self.assertEqual("Pound", self.uk.currency)
 
-    
         # self.name = name
         # self.capital_city = capital_city
         # self.population = population
