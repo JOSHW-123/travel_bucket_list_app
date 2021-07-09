@@ -6,9 +6,9 @@ from models.country import *
 
 class TestCity(unittest.TestCase):
     def setUp(self):
-        self.uk = Country("UK", "Europe", 67000000, "English", "Pound")
-        self.germany = Country("Germany", "Europe", 83000000, "German", "Euro")
-        self.russia = Country("Russia", "Europe/Asia", 144000000, "Russian", "Ruble")
+        self.uk = Country("UK", "Europe", "67000000", "English", "Pound")
+        self.germany = Country("Germany", "Europe", "83000000", "German", "Euro")
+        self.russia = Country("Russia", "Europe/Asia", "144000000", "Russian", "Ruble")
 
         self.london = City("London", "UK", "Tower of London", "23°", self.uk)
         self.berlin = City("Berlin", "Germany", "Brandenburg Gate", "24°", self.germany)
