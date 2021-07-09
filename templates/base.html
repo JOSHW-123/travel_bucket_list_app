@@ -6,17 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>My Travel Bucket List</title>
+    <link rel="shortcut icon" type="image/jpg" href="/static/images/favicon.ico"/>
 </head>
 <body>
     <header>
-        <nav>
+        <!-- <nav id="nav">
             <ul class="menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/bucketlist">My List</a></li>
 
 
             </ul>
-        </nav>
+        </nav> -->
+        <div class="topnav">
+            <a class="active" href="/">Home</a>
+            <a href="/bucketlist">My Bucket List</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
+          <br>
+        <img id="logo" src="/static/images/my_travel_bucketlist.png" alt="My Travel Bucket List">
+        
     </header>
     <div>
         {% block content %}
