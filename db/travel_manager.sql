@@ -5,15 +5,21 @@ DROP TABLE IF EXISTS countries;
 CREATE TABLE countries (
     id SERIAL PRIMARY KEY,
     country_name VARCHAR(255),
-    visited BOOLEAN,
-    popular_destinations VARCHAR(255)
+    capital_city VARCHAR(255),
+    country_population INT,
+    country_language VARCHAR(255),
+    currency VARCHAR(255),
+    visited BOOLEAN
+    
 );
 
 CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     city_name VARCHAR(255),
-    visited BOOLEAN,
-    attractions VARCHAR(255)
+    temperature VARCHAR(255),
+    attractions VARCHAR(255),
+    visited BOOLEAN
+    
 
 );
 
