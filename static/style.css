@@ -1,0 +1,28 @@
+body{
+    font-family: "Helvetica", arial, sans-serif; font-size: 16px;
+    width: 70%;
+    background-color: darkcyan;
+  }
+
+  h1{
+      text-align: center;
+  }
+
+  .menu{
+    display: flex;
+    padding: 10px;
+    background-color: darkcyan;
+    color: white;
+   
+  }
+
+  .menu li{
+    padding-right: 10px;
+    list-style: none;
+    color: white;
+    font-family: "Helvetica", arial, sans-serif; font-size: 14px;
+  }
+
+  .menu li a{
+    text-decoration: none;
+  }
