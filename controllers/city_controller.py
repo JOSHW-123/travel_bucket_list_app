@@ -5,4 +5,4 @@ from repositories import city_repository, country_repository
 from models.city import City
 from models.country import Country
 
-travel_blueprint = Blueprint("travel", __name__)
+cities_blueprint = Blueprint("cities", __name__)
