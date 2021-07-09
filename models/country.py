@@ -1,8 +1,8 @@
 class Country:
 
-    def __init__(self, name, capital_city, population, language, currency, id = None, visited = False):
+    def __init__(self, name, geographical_area, population, language, currency, id = None, visited = False):
         self.name = name
-        self.capital_city = capital_city
+        self.geographical_area = geographical_area
         self.population = population
         self.language = language
         self.currency = currency
