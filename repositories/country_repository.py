@@ -52,7 +52,7 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-# def update(city):
-#     sql = "UPDATE cities SET (name, attractions, temperature, country_id, visited) = (%s, %s, %s, %s, %s) WHERE id = %s"
-#     values = [city.name, city.country, city.attractions, city.temperature, city.country.id, city.visited, city.id]
-#     run_sql(sql, values)
+def update(country):
+    sql = "UPDATE countries SET (name, geographical_area, population, language, currency, visited) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [country.name, country.geographical_area, country.population, country.language, country.currency, country.id, country.visited]
+    run_sql(sql, values)
