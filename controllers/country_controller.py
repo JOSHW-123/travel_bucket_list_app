@@ -30,6 +30,7 @@ def create_country():
     country_repository.save(country)
     return redirect("/countries")
 
+# Come back to this one, route(redirect) may need to be changed.
 @countries_blueprint.route("/countries/<id>/delete", methods=["POST"])
 def delete_country(id):
     country_repository.delete(id)
@@ -46,6 +47,20 @@ def edit_country(id):
     cities = city_repository.select_all()
     return render_template("countries/edit.html", country=country,
     all_cities=cities)
+
+# Come back to this one, route(redirect) may need to be changed.
+@countries_blueprint.route("/countries/<id>", methods=["POST"])
+def update_country(id):
+    name = request.form["name"]
+    geographical_area = request.form["geographical_area"]
+    population = request.form["population"]
+    language = request.form["language"]
+    currency = request.form["currency"]
+    visited = request.form["visited"]
+    country = Country(name, geographical_area, population, language, currency, id, visited)
+    country_repository.update(country)
+    return redirect("/countries")
+
 
     # self.name = name
     #     self.geographical_area = geographical_area
