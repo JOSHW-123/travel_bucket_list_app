@@ -13,6 +13,12 @@ def countries():
     countries = country_repository.select_all()
     return render_template("countries/index.html", all_countries=countries)
 
+@countries_blueprint.route("/countries/new")
+def new_country():
+    countries = country_repository.select_all()
+    return render_template("countries/new.html")
+
+
 # @tasks_blueprint.route("/tasks")
 # def tasks():
 #     tasks = task_repository.select_all()
