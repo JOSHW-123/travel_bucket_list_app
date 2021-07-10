@@ -5,14 +5,6 @@ from models.city import City
 
 import repositories.country_repository as country_repository
 
-        # self.name = name
-        # self.geographical_area = geographical_area
-        # self.population = population
-        # self.language = language
-        # self.currency = currency
-        # self.id = id
-        # self.visited = visited
-
 def save(country):
     sql = "INSERT INTO countries (name, geographical_area, population, language, currency, visited) VALUES (%s,%s,%s,%s,%s,%s) RETURNING *"
     values = [country.name, country.geographical_area, country.population, country.language, country.currency, country.visited]
@@ -56,3 +48,12 @@ def update(country):
     sql = "UPDATE countries SET (name, geographical_area, population, language, currency, visited) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [country.name, country.geographical_area, country.population, country.language, country.currency, country.id, country.visited]
     run_sql(sql, values)
+
+
+    # self.name = name
+        # self.geographical_area = geographical_area
+        # self.population = population
+        # self.language = language
+        # self.currency = currency
+        # self.id = id
+        # self.visited = visited
