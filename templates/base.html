@@ -5,11 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My Travel Bucket List</title>
     <link rel="shortcut icon" type="image/jpg" href="/static/images/favicon.ico"/>
 </head>
 <body>
+    
     <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                My Travel Bucket List
+              </div>
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+    
+            <div class="nav-links">
+                <ul>
+              <li><a href="/" target="_blank">Home</a></li>
+              <li><a href="countries/index.html" target="_blank">All Countries</a></li>
+              <li><a href="cities/index.html" target="_blank">All Cities</a></li>
+              <li><a href="bucketlist.html" target="_blank">Bucket List</a></li>
+              <li><a href="cities/new.html" target="_blank">Add City</a></li>
+              <li><a href="countries/new.html" target="_blank">Add Country</a></li>
+              <a class="icon">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-youtube"></i>
+    
+              </a>
+                </ul>
+            </div>
+          </div>
         <!-- <nav id="nav">
             <ul class="menu">
                 <li><a href="/">Home</a></li>
@@ -18,24 +52,29 @@
 
             </ul>
         </nav> -->
-        <div class="topnav">
+        <!-- <div class="topnav">
             <a class="active" href="/">Home</a>
             <a href="/bucketlist">My Bucket List</a>
             <a href="/contact">Contact</a>
             <a href="/about">About</a>
-          </div>
+          </div> -->
           <br>
         <img id="logo" src="/static/images/my_travel_bucketlist.png" alt="My Travel Bucket List">
         
     </header>
 
-    <div>
+    <div class="container">
+
         {% block content %}
         {% endblock %}
+
     </div>
     <footer>
         &copy; Copyright 2021 Josh Wilkinson Codeclan E50
     </footer>
+    
+      {% block home %}
+      {% endblock %}
     
 </body>
 </html>
