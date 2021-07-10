@@ -25,6 +25,17 @@ def select_all():
         cities.append(city)
     return cities
 
+def select(id):
+    city = None
+    sql = "SELECT * FROM cities WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        country = country_repository.select(result["id"])
+        city = City(result["name"], country, result["attractions"], result["temperature"], result["id"], result["visited"])
+    return city
+
 # def select_all():
 #     tasks = []
 
@@ -37,12 +48,12 @@ def select_all():
 #         tasks.append(task)
 #     return tasks
 
-# self.name = name
-# self.country = country
-# self.attractions = attractions 
-# self.temperature = temperature
-# self.id = id
-# self.visited = visited
+        # self.name = name
+        # self.country = country
+        # self.attractions = attractions
+        # self.temperature = temperature
+        # self.id = id
+        # self.visited = visited
 
 # def save(task):
 #     sql = "INSERT INTO tasks (description, user_id, duration, completed) VALUES (%s, %s, %s, %s) RETURNING *"
