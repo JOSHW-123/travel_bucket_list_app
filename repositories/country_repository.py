@@ -40,12 +40,12 @@ def select(id):
 
     if result is not None:
         country = Country(result["name"], result["geographical_area"], result["population"], result["language"], result["currency"], result["id"], result["visited"])
-        
+
     return country
 
-# def delete_all():
-#     sql = "DELETE FROM cities"
-#     run_sql(sql)
+def delete_all():
+    sql = "DELETE FROM countries"
+    run_sql(sql)
 
 # def delete(id):
 #     sql = "DELETE FROM cities WHERE id = %s"
