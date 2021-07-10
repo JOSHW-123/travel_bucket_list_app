@@ -9,7 +9,7 @@ def save(country):
     sql = "INSERT INTO countries (name, geographical_area, population, language, currency, visited) VALUES (%s,%s,%s,%s,%s,%s) RETURNING *"
     values = [country.name, country.geographical_area, country.population, country.language, country.currency, country.visited]
     results = run_sql(sql, values)
-    id = results[0]['id']
+    id = results[0]["id"]
     country.id = id
     return country
 

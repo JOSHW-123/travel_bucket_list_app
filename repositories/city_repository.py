@@ -9,7 +9,7 @@ def save(city):
     sql = "INSERT INTO cities (name, country, attractions, temperature, country_id, visited) VALUES (%s,%s,%s,%s,%s,%s) RETURNING *"
     values = [city.name, city.country, city.attractions, city.temperature, city.country.id, city.visited]
     results = run_sql(sql, values)
-    id = results[0]['id']
+    id = results[0]["id"]
     city.id = id
     return city
 
@@ -20,8 +20,8 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        country = country_repository.select(row['country_id'])
-        city = City(row['name'], country, row['attractions'], row['temperature'], row['id'], row['visited'])
+        country = country_repository.select(row["country_id"])
+        city = City(row["name"], country, row["attractions"], row["temperature"], row["id"], row["visited"])
         cities.append(city)
     return cities
 

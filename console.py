@@ -24,6 +24,9 @@ country_repository.select_all()
 
 city_1 = City("London", "UK", "Tower of London", "23°", country_1)
 city_repository.save(city_1)
+
+# city.name, city.country, city.attractions, city.temperature, city.country.id, city.visited
+
 city_2 = City("Berlin", "Germany", "Brandenburg Gate", "24°", country_2)
 city_repository.save(city_2)
 city_3 = City("Moscow", "Russia", "Red Square", "24°", country_3)
