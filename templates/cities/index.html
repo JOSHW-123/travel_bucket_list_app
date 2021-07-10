@@ -2,4 +2,28 @@
 
 {% block content %}
 
+<h1><b>Your List Of Cities</b></h1>
+    <p>You can find all the cities you have already visited listed below, along with cities you want to visit. 
+    </p>
+<p><b>Please feel free to add to your list at anytime</b></p>
+
+{% for city in all_cities %}
+<div class="container">
+<div class="cities">
+
+  <h2><br><b>{{city.name}}</h2>
+  <br><b>Cities you've visited:</b> {{city.visited}}
+  
+
+<form action="/cities/{{city.id}}/delete" method="POST">
+    <br>
+    <button type="delete">Delete City</button>
+</form>
+<form action="/cities/{{city.id}}/edit" method="GET">
+    <button type="edit">Edit City</button>
+</form>
+
+</div>
+</div>
+
 {% endblock %}
