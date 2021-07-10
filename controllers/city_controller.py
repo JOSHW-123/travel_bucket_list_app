@@ -34,6 +34,11 @@ def delete_city(id):
     city_repository.delete(id)
     return redirect("/cities")
 
+@cities_blueprint.route("/cities/<id>", methods=["GET"])
+def show_city(id):
+    city = city_repository.select(id)
+    return render_template("/cities/show.html", city=city)
+
 
 
         # self.name = name
