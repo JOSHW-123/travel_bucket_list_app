@@ -30,6 +30,8 @@ def create_country():
     country_repository.save(new_country)
     return redirect("/countries")
 
+@countries_blueprint.route()
+
 
     # self.name = name
     #     self.geographical_area = geographical_area
