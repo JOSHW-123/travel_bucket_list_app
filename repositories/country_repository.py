@@ -32,16 +32,16 @@ def select_all():
         countries.append(country)
     return countries
 
-# def select(id):
-#     city = None
-#     sql = "SELECT * FROM cities WHERE id = %s"
-#     values = [id]
-#     result = run_sql(sql, values)[0]
+def select(id):
+    country = None
+    sql = "SELECT * FROM countries WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
 
-#     if result is not None:
-#         country = country_repository.select(result["id"])
-#         city = City(result["name"], country, result["attractions"], result["temperature"], result["id"], result["visited"])
-#     return city
+    if result is not None:
+        country = Country(result["name"], result["geographical_area"], result["population"], result["language"], result["currency"], result["id"], result["visited"])
+        
+    return country
 
 # def delete_all():
 #     sql = "DELETE FROM cities"
