@@ -5,7 +5,7 @@
 <h1>Lets add your country below</h1>
 <p>Please make sure to fill out all the required information.</p>
 
-<form action="/countries" method="post"></form>
+<form action="/countries" method="post">
 
 <div>
     <label for="name">Country Name:</label>
@@ -31,12 +31,19 @@
     <label for="visited">Visited:</label>
     <select name="visited" id="visited">
         <option value="disabled selected">Please select an option:</option>
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
+        <option value="True">Yes</option>
+        <option value="False">No</option>
     </select>
 </div>
+<div>
+    <button type="submit">Add Country</button>
+</div>
 
+
+</form>
 {% endblock %}
+<!-- 
+<button type="submit">Add task!</button> -->
 
 <!-- # self.name = name
 #     self.geographical_area = geographical_area

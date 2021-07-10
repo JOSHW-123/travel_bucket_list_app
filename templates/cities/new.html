@@ -4,6 +4,7 @@
 
 <h1>Lets add your city below</h1>
 <p>Please make sure to fill out all the required information.</p>
+<p>Remember to enter one attraction you want to visit</p>
 
 <form action="/cities" method="post"></form>
 
@@ -13,19 +14,22 @@
 </div>
 <div>
     <label for="attractions">Attractions:</label>
-    <input type="text" id="attractions" name="attractions" placeholder="attractions">
+    <input type="text" id="attractions" name="attractions" placeholder="Popular Attraction">
 </div>
 <div>
     <label for="temperature">Temperature:</label>
-    <input type="text"  id="temperature" name="temperature" placeholder="Please Enter Temperature">
+    <input type="text"  id="temperature" name="temperature" placeholder="Enter the Temperature">
 </div>
 <div>
     <label for="visited">Visited:</label>
     <select name="visited" id="visited">
         <option value="disabled selected">Please select an option:</option>
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
+        <option value="True">Yes</option>
+        <option value="False">No</option>
     </select>
+</div>
+<div>
+    <button type="submit">Add City</button>
 </div>
 
 {% endblock %}
