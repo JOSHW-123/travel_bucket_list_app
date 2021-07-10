@@ -16,7 +16,28 @@ def countries():
 @countries_blueprint.route("/countries/new")
 def new_country():
     countries = country_repository.select_all()
-    return render_template("countries/new.html")
+    return render_template("countries/new.html", all_countries=countries)
+
+@countries_blueprint.route("/countries", method=["POST"])
+def create_country():
+    name = request.form["name"]
+    geographical_area = request.form["geographical_area"]
+    population = request.form["population"]
+    language = request.form["language"]
+    currency = request.form["currency"]
+    visited = request.form["visited"]
+    new_country = Country(name, geographical_area, population, language, currency, visited)
+    country_repository.save(new_country)
+    return redirect("/countries")
+
+
+    # self.name = name
+    #     self.geographical_area = geographical_area
+    #     self.population = population
+    #     self.language = language
+    #     self.currency = currency
+    #     self.id = id
+    #     self.visited = visited
 
 
 # @tasks_blueprint.route("/tasks")
