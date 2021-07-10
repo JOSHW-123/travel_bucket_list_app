@@ -61,7 +61,6 @@ def update_country(id):
     country_repository.update(country)
     return redirect("/countries")
 
-
     # self.name = name
     #     self.geographical_area = geographical_area
     #     self.population = population
