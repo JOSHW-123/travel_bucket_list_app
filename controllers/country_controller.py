@@ -43,9 +43,9 @@ def show_country(id):
 @countries_blueprint.route("/countries/<id>/edit", methods=["GET"])
 def edit_country(id):
     country = country_repository.select(id)
-    city = city_repository.select_all()
+    cities = city_repository.select_all()
     return render_template("countries/edit.html", country=country,
-    all_cities=city)
+    all_cities=cities)
 
     # self.name = name
     #     self.geographical_area = geographical_area
