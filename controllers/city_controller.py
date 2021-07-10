@@ -17,6 +17,7 @@ def new_city():
     cities = city_repository.select_all()
     return render_template("cities/new.html", all_cities=cities)
 
+# Revisit this one, something doesn't look right.
 @cities_blueprint.route("/cities", methods=["POST"])
 def create_city():
     name = request.form["name"]
@@ -26,6 +27,11 @@ def create_city():
     visited = request.form["visited"]
     city = City(name, country, attractions, temperature,id, visited)
     city_repository.save(city)
+    return redirect("/cities")
+
+@cities_blueprint.route("/cities/<id>/delete", methods=["POST"])
+def delete_city(id):
+    city_repository.delete(id)
     return redirect("/cities")
 
 
