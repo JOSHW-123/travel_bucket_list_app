@@ -21,17 +21,16 @@ def save(country):
     country.id = id
     return country
 
-# def select_all():
-#     cities = []
+def select_all():
+    countries = []
 
-#     sql = "SELECT * FROM cities"
-#     results = run_sql(sql)
+    sql = "SELECT * FROM countries"
+    results = run_sql(sql)
 
-#     for row in results:
-#         country = country_repository.select(row['country_id'])
-#         city = City(row['name'], country, row['attractions'], row['temperature'], row['id'], row['visited'])
-#         cities.append(city)
-#     return cities
+    for row in results:
+        country = Country(row["name"], row["geographical_area"], row["population"], row["language"], row["currency"], row["id"], row["visited"])
+        countries.append(country)
+    return countries
 
 # def select(id):
 #     city = None
