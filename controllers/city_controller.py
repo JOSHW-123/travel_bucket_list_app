@@ -39,6 +39,13 @@ def show_city(id):
     city = city_repository.select(id)
     return render_template("/cities/show.html", city=city)
 
+@cities_blueprint.route("/cities/<id>/edit", methods=["GET"])
+def edit_city(id):
+    city = city_repository.select(id)
+    countries = country_repository.select_all()
+    return render_template("cities/edit.html", city=city,
+    all_countries=countries)
+
 
 
         # self.name = name
