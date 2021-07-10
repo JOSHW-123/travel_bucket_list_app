@@ -30,9 +30,15 @@ def create_country():
     country_repository.save(country)
     return redirect("/countries")
 
-# @countries_blueprint.route()
-# pass
+@countries_blueprint.route("/countries/<id>/delete", methods=["POST"])
+def delete_country(id):
+    country_repository.delete(id)
+    return redirect("/countries")
 
+@countries_blueprint.route("/countries/<id>", methods=["GET"])
+def show_country(id):
+    country = country_repository.select(id)
+    return render_template("/countries/show.html", country=country)
 
     # self.name = name
     #     self.geographical_area = geographical_area
