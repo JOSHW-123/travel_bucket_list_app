@@ -16,7 +16,6 @@ CREATE TABLE countries (
 CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    country VARCHAR(255),
     attractions VARCHAR(255),
     temperature VARCHAR(255),
     country_id INT REFERENCES countries(id),

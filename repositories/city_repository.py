@@ -6,8 +6,8 @@ from models.country import Country
 import repositories.country_repository as country_repository
 
 def save(city):
-    sql = "INSERT INTO cities (name, country, attractions, temperature, country_id, visited) VALUES (%s,%s,%s,%s,%s,%s) RETURNING *"
-    values = [city.name, city.country, city.attractions, city.temperature, city.country.id, city.visited]
+    sql = "INSERT INTO cities (name, country_id, attractions, temperature, visited) VALUES (%s,%s,%s,%s,%s) RETURNING *"
+    values = [city.name, city.country.id, city.attractions, city.temperature, city.visited]
     results = run_sql(sql, values)
     id = results[0]["id"]
     city.id = id
@@ -46,8 +46,8 @@ def delete(id):
     run_sql(sql, values)
 
 def update(city):
-    sql = "UPDATE cities SET (name, attractions, temperature, country_id, visited) = (%s, %s, %s, %s, %s) WHERE id = %s"
-    values = [city.name, city.country, city.attractions, city.temperature, city.country.id, city.visited, city.id]
+    sql = "UPDATE cities SET (name, country_id, attractions, temperature, visited) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    values = [city.name, city.country.id, city.attractions, city.temperature, city.visited, city.id]
     run_sql(sql, values)
     
 # def select_all():

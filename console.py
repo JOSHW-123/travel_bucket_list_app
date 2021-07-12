@@ -22,14 +22,14 @@ country_repository.save(country_4)
 
 country_repository.select_all()
 
-city_1 = City("London", "UK", "Tower of London", "23°", country_1)
+city_1 = City("London", country_1, "Tower of London", "23°" )
 city_repository.save(city_1)
 
 # city.name, city.country, city.attractions, city.temperature, city.country.id, city.visited
 
-city_2 = City("Berlin", "Germany", "Brandenburg Gate", "24°", country_2)
+city_2 = City("Berlin", country_2, "Brandenburg Gate", "24°", )
 city_repository.save(city_2)
-city_3 = City("Moscow", "Russia", "Red Square", "24°", country_3)
+city_3 = City("Moscow", country_3, "Red Square", "24°", )
 city_repository.save(city_3)
 
 city_repository.select_all()
