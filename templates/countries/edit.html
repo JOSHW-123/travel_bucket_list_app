@@ -2,4 +2,51 @@
 
 {% block content %}
 
+    <!-- name = request.form["name"]
+    geographical_area = request.form["geographical_area"]
+    population = request.form["population"]
+    language = request.form["language"]
+    currency = request.form["currency"]
+    visited = request.form["visited"] -->
+
+<form action="/countries/{{ country.id }}" method="post">
+
+    <div>
+      <label for="name">Country Name:</label>
+      <input type="text" id="name" name="name" value="{{country.name}}">
+    </div>
+  
+    <div>
+      <label for="population">Population:</label>
+      <input type="text" id="population" name="population" value="{{country.population}}">
+    </div>
+  
+    <div>
+      <label for="language">Language:</label>
+      <input type="text" id="language" name="language" value="{{country.language}}">
+    </div>
+  
+    <div>
+      <label for="currency">Currency:</label>
+      <input type="text" id="currency" name="currency" value="{{country.currency}}">
+    </div>
+  
+    <div>
+      <label for="geographical_area">Geographical Area:</label>
+      <input type="text" id="geographical_area" name="geographical_area" value="{{country.geographical_area}}">
+    </div>
+  
+    <div>
+      <label for="visited">Visited:</label>
+      <select id="visited" name="visited">
+        <option value="True">Visited</option>
+        <option value="False">Not Visited</option>
+      </select>
+    </div>
+  
+  
+    <button type="submit">Update Country</button>
+  
+  </form>
+
 {% endblock %}

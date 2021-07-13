@@ -1,42 +1,3 @@
-/* body{
-    font-family: "Helvetica", arial, sans-serif; font-size: 16px;
-    width: 70%;
-    background-color: white;
-  }
-
-  h1{
-      text-align: center;
-  }
-
-  .menu{
-    display: flex;
-    padding: 10px;
-    background-color: white;
-    color: white;
-    background-color: #333;
-    overflow: hidden;
-   
-  }
-
-  .menu li{
-    padding-right: 10px;
-    list-style: none;
-    color: white;
-    font-family: "Helvetica", arial, sans-serif; font-size: 14px;
-  }
-
-  .menu li a{
-    text-decoration: none;
-  }
-
-  #logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
- */
-/* Add a black background color to the top navigation */
 
 * {
   box-sizing: border-box;
@@ -50,7 +11,7 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: #1177ca;
+  background-color: #4272b9;
   position: relative;
 }
 
@@ -94,12 +55,12 @@ body {
 }
 .nav > .nav-links > ul li{
   display: inline-block;
-  background-color: #1177ca;
+  background-color: #4272b9;
 
 
 }
 .nav > .nav-links > ul li:hover{
-    background-color: #0b65af;
+    background-color: #4777f0;
     border-radius: 5px;
 }
 
@@ -187,6 +148,43 @@ margin-right: 10px;
 }
 
 
+/* #home-image{
+    margin: 5px, auto;
+    max-height: 20%;
+    max-width: 20%;
+   
+
+} */
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: 1px;
+}
+
+#home-image{
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 75%;
+  max-width: 75%;
+  border-radius: 15px;
+
+  
+}
+
+#logo{
+  margin-left: 25%;
+}
+
+#new-logo{
+  height: 40px;
+  
+  
+  
+}
+
 
 /* .topnav {
     background-color: #333;
@@ -214,3 +212,5 @@ margin-right: 10px;
     background-color: #aa2b04;
     color: white;
   }  */ 
+
+  

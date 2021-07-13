@@ -11,19 +11,24 @@
 <div class="container">
 <div class="cities">
 
-  <h2><br><b>{{city.name}}</h2>
-  <br><b>Cities you've visited:</b> {{city.visited}}
+  <h1><br><b>{{city.name}}</h1>
+  <br><b>Have you visited here?</b> 
+  <br>
+  <br>{{city.visited}}
   
 
 <form action="/cities/{{city.id}}/delete" method="POST">
     <br>
     <button type="delete">Delete City</button>
 </form>
-<form action="/cities/{{city.id}}/edit" method="GET">
+<form action="/cities/{{city.id}}/edit" method="POST">
     <button type="edit">Edit City</button>
 </form>
+<br>
 
 </div>
 </div>
+
+{% endfor %}
 
 {% endblock %}

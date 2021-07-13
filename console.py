@@ -8,27 +8,28 @@ import repositories.city_repository as city_repository
 city_repository.delete_all()
 country_repository.delete_all()
 
-country_1 = Country("UK", "Europe", "67,000,000", "English", "Pound")
+country_1 = Country("UK", "Europe", "67,000,000", "English", "Pound(£)")
 country_repository.save(country_1)
 
-country_2 = Country("Germany", "Europe", "83,000,000", "German", "Euro")
+country_2 = Country("Germany", "Europe", "83,000,000", "German", "Euro(€)")
 country_repository.save(country_2)
 
-country_3 = Country("Russia", "Europe/Asia", "144,000,000", "Russian", "Ruble")
+country_3 = Country("Russia", "Europe/Asia", "144,000,000", "Russian", "Ruble(₽)")
 country_repository.save(country_3)
 
-country_4 = Country("USA", "North America", "328,000,000", "English", "Dollar")
+country_4 = Country("USA", "North America", "328,000,000", "English", "Dollar($)")
 country_repository.save(country_4)
 
 country_repository.select_all()
 
+# city.name, city.country, city.attractions, city.temperature, city.country.id, city.visited
+
 city_1 = City("London", country_1, "Tower of London", "23°" )
 city_repository.save(city_1)
 
-# city.name, city.country, city.attractions, city.temperature, city.country.id, city.visited
-
 city_2 = City("Berlin", country_2, "Brandenburg Gate", "24°", )
 city_repository.save(city_2)
+
 city_3 = City("Moscow", country_3, "Red Square", "24°", )
 city_repository.save(city_3)
 

@@ -34,7 +34,7 @@ def create_country():
 @countries_blueprint.route("/countries/<id>/delete", methods=["POST"])
 def delete_country(id):
     country_repository.delete(id)
-    return redirect("/bucketlist")
+    return redirect("/countries")
 
 @countries_blueprint.route("/countries/<id>", methods=["GET"])
 def show_country(id):
@@ -59,7 +59,7 @@ def update_country(id):
     visited = request.form["visited"]
     country = Country(name, geographical_area, population, language, currency, id, visited)
     country_repository.update(country)
-    return redirect("/bucketlist")
+    return redirect("/countries")
 
     # self.name = name
     #     self.geographical_area = geographical_area

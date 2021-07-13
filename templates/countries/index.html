@@ -2,4 +2,33 @@
 
 {% block content %}
 
+<div class="countries-container">
+
+    {% for country in all_countries %}
+    <div class="countries-index">
+
+    <h1><b>{{country.name}}</b></h1>
+    <p>Geographical Area: <b>{{country.geographical_area}}</b></p>
+    <p>Population: <b>{{country.population}}</b></p>
+    <p>Language: <b>{{country.language}}</b></p>
+    <p>Currency: <b>{{country.currency}}</b></p>
+    <br>
+    <p>Have you Visited?: <b>{{country.visited}}</b></p>
+   
+
+    <form action="/countries/{{country.id}}/delete" method="POST">
+        <button type="delete">Delete</button>
+    </form>
+    <br>
+    <form action="/countries/{{country.id}}/edit" method="GET">
+        <button type="edit">Edit</button>
+    </form>
+    <br>
+
+      
+    </div>
+  {% endfor %}
+  
+ 
+
 {% endblock %}

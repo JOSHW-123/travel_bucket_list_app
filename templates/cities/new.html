@@ -6,31 +6,37 @@
 <p>Please make sure to fill out all the required information.</p>
 <p>Remember to enter one attraction you want to visit</p>
 
-<form action="/cities" method="post"></form>
+<form action="/cities" method="post">
 
 <div>
-    <label for="name">City Name:</label>
-    <input type="text" id="name" name="name" placeholder="Enter City Name" required>
+    <br><b><label for="name">City Name:</label><br></b>
+    <br><input type="text" id="name" name="name" placeholder="Enter City Name" required>
 </div>
 <div>
-    <label for="attractions">Attractions:</label>
-    <input type="text" id="attractions" name="attractions" placeholder="Popular Attraction">
+    <br><b><label for="attractions">Attractions:</label><br></b>
+    <br><input type="text" id="attractions" name="attractions" placeholder="Popular Attraction">
 </div>
 <div>
-    <label for="temperature">Temperature °C:</label>
-    <input type="text"  id="temperature" name="temperature" placeholder="Enter the Temperature">
+    <br><b><label for="temperature">Temperature °C:</label><br></b>
+    <br><input type="text"  id="temperature" name="temperature" placeholder="Enter the Temperature">
 </div>
 <div>
-    <label for="country">Country:</label>
-    <select id="country" name="country_id">
-      {% for country in all_countries %}
-        <option value="{{ country.id }}">{{ country.name }}</option>
-      {% endfor %}
+    <br><b><label for="country">Country:</label><br></b>
+    <br><select name="country_id" id="country_id">
+        {% for country in all_countries %}
+        <option value="" disabled selected hidden>Select Country</option>
+        <option value="{{ country.id }}">{{ country.name }} </option>
+        {% endfor %}
     </select>
-  </div>
+</div>
+
+<!-- <div>
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" placeholder="Enter The Country">
+  </div> -->
 <div>
-    <label for="visited">Visited:</label>
-    <select name="visited" id="visited">
+    <br><b><label for="visited">Visited:</label><br></b>
+    <br><select name="visited" id="visited">
         <option value="disabled selected">Please select an option:</option>
         <option value="True">Yes</option>
         <option value="False">No</option>
@@ -39,7 +45,10 @@
 <br>
 <div>
     <button type="submit">Add City</button>
+    
 </div>
+</form>
+<br>
 
 {% endblock %}
 

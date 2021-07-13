@@ -16,7 +16,7 @@
             <input type="checkbox" id="nav-check">
             <div class="nav-header">
               <div class="nav-title">
-                My Travel Bucket List
+                <img id="new-logo" src="/static/images/new-logo.png" alt="My Travel Bucket List">
               </div>
             </div>
             <div class="nav-btn">
@@ -27,54 +27,38 @@
               </label>
             </div>
     
-            <div class="nav-links">
-                <ul>
-              <li><a href="/" target="_blank">Home</a></li>
-              <li><a href="countries/index.html" target="_blank">All Countries</a></li>
-              <li><a href="cities/index.html" target="_blank">All Cities</a></li>
-              <li><a href="bucketlist.html" target="_blank">Bucket List</a></li>
-              <li><a href="cities/new.html" target="_blank">Add City</a></li>
-              <li><a href="countries/new.html" target="_blank">Add Country</a></li>
+          <nav class="nav-links">
+            
+          <ul>
+              <li><a href="{{ url_for('home') }}" target="_self">Home</a></li>
+              <li><a href="{{ url_for('countries.countries') }}" target="_self">All Countries</a></li>
+              <li><a href="{{ url_for('cities.cities') }}" target="_self">All Cities</a></li>
+              <li><a href="{{ url_for('cities.new_city') }}" target="_self">Add City</a></li>
+              <li><a href="{{ url_for('countries.new_country') }}" target="_self">Add Country</a></li>
               <a class="icon">
                 <i class="fa fa-twitter"></i>
                 <i class="fa fa-linkedin"></i>
                 <i class="fa fa-youtube"></i>
     
               </a>
-                </ul>
+            </ul>
             </div>
           </div>
-        <!-- <nav id="nav">
-            <ul class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/bucketlist">My List</a></li>
-
-
-            </ul>
-        </nav> -->
-        <!-- <div class="topnav">
-            <a class="active" href="/">Home</a>
-            <a href="/bucketlist">My Bucket List</a>
-            <a href="/contact">Contact</a>
-            <a href="/about">About</a>
-          </div> -->
           <br>
         <img id="logo" src="/static/images/my_travel_bucketlist.png" alt="My Travel Bucket List">
         
     </header>
 
-    <div class="container">
+    <main>
 
         {% block content %}
         {% endblock %}
 
-    </div>
+    </main>
     <footer>
-        &copy; Copyright 2021 Josh Wilkinson Codeclan E50
+        &copy; 2021 Codeclan E50
     </footer>
-    
-      {% block home %}
-      {% endblock %}
+
     
 </body>
 </html>

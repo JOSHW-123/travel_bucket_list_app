@@ -5,6 +5,25 @@ from models.city import City
 
 import repositories.country_repository as country_repository
 
+def cities(country):
+    cities = []
+
+    sql = "SELECT * FROM cities WHERE country_id = %s"
+    values = [country.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        city = City(row["name"], row["country"], row["attractions"], row["temperature"], row["id"], row["visited"])
+        cities.append(city)
+    return cities
+
+    # self.name = name
+    #     self.country = country
+    #     self.attractions = attractions
+    #     self.temperature = temperature
+    #     self.id = id
+    #     self.visited = visited
+
 def save(country):
     sql = "INSERT INTO countries (name, geographical_area, population, language, currency, visited) VALUES (%s,%s,%s,%s,%s,%s) RETURNING *"
     values = [country.name, country.geographical_area, country.population, country.language, country.currency, country.visited]

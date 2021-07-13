@@ -21,18 +21,18 @@ def new_city():
 @cities_blueprint.route("/cities", methods=["POST"])
 def create_city():
     name = request.form["name"]
-    country = country_repository.select(request.form["country"])
+    country = country_repository.select(request.form["country_id"])
     attractions = request.form["attractions"]
     temperature = request.form["temperature"]
     visited = request.form["visited"]
-    city = City(name, country, attractions, temperature,id, visited)
+    city = City(name, country, attractions, temperature, id, visited)
     city_repository.save(city)
     return redirect("/cities")
 
 @cities_blueprint.route("/cities/<id>/delete", methods=["POST"])
 def delete_city(id):
     city_repository.delete(id)
-    return redirect("/bucketlist")
+    return redirect("/cities")
 
 @cities_blueprint.route("/cities/<id>", methods=["GET"])
 def show_city(id):
@@ -55,7 +55,7 @@ def update_city(id):
     visited = request.form["visited"]
     city = City(name, country, attractions, temperature, id, visited)
     city_repository.update(city)
-    return redirect("/bucketlist")
+    return redirect("/cities")
 
 
         # self.name = name
