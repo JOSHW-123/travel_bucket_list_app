@@ -62,10 +62,11 @@ def edit_city(id):
 @cities_blueprint.route("/cities/<id>", methods=["POST"])
 def update_city(id):
     name = request.form["name"]
-    country = country_repository.select(request.form["country_id"])
+    country_id = request.form["country_id"]
     attractions = request.form["attractions"]
     temperature = request.form["temperature"]
     visited = request.form["visited"]
+    country = country_repository.select(country_id)
     city = City(name, country, attractions, temperature, id, visited)
     city_repository.update(city)
     return redirect("/cities")

@@ -7,10 +7,15 @@
     </p>
 <p id="countries-paragraph"><b>Please feel free to add to your list at anytime</b></p>
 
+
 <div class="countries-container">
+    
 
     {% for country in all_countries %}
     <div class="countries-index">
+        <fieldset id="countries-list-container" >
+            <img id="flags-image" src="/static/images/119-1199148_earth-vector-earth-graphic-black-and-white.png" alt="flags">
+            <b><legend></legend></b>
 
     <h1><b>{{country.name}}</b></h1>
     <p>Geographical Area: <b>{{country.geographical_area}}</b></p>
@@ -22,12 +27,13 @@
    
 
     <form action="/countries/{{country.id}}/delete" method="POST">
-        <button type="delete">Delete</button>
+        <button id="countries-delete-button" type="delete">Delete</button>
     </form>
     <br>
     <form action="/countries/{{country.id}}/edit" method="GET">
-        <button type="edit">Edit</button>
+        <button id="countries-edit-button" type="edit">Edit</button>
     </form>
+</fieldset>
     <br>
 
       
