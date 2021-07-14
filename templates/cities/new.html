@@ -20,21 +20,23 @@
     <br><b><label for="temperature">Temperature °C:</label><br></b>
     <br><input type="text"  id="temperature" name="temperature" placeholder="Enter the Temperature">
 </div>
-<div>
+
+<!-- <div>
     <br><b><label for="country">Country:</label><br></b>
     <br><select name="country_id" id="country_id">
         {% for country in all_countries %}
         <option value="" disabled selected hidden>Select Country</option>
-        <option value="{{ country.id }}">{{ country.name }} </option>
+        <option value="{{ country.id}}">{{ country.id}} </option>
         {% endfor %}
     </select>
-</div>
+</div> -->
 
-<!-- <div>
-    <label for="country">Country:</label>
-    <input type="text" id="country" name="country" placeholder="Enter The Country">
-  </div> -->
 <div>
+    <br><b><label for="country_id">Country:</label></b><br>
+    <br><input type="text" id="country_id" name="country_id" placeholder="Enter The Country">
+  </div>
+<div>
+
     <br><b><label for="visited">Visited:</label><br></b>
     <br><select name="visited" id="visited">
         <option value="disabled selected">Please select an option:</option>

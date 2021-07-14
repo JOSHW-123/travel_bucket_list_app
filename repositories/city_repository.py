@@ -32,7 +32,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        country = country_repository.select(result["id"])
+        country = country_repository.select(result["country_id"])
         city = City(result["name"], country, result["attractions"], result["temperature"], result["id"], result["visited"])
     return city
 

@@ -5,17 +5,17 @@ from models.city import City
 
 import repositories.country_repository as country_repository
 
-def cities(country):
-    cities = []
+# def cities(country):
+#     cities = []
 
-    sql = "SELECT * FROM cities WHERE country_id = %s"
-    values = [country.id]
-    results = run_sql(sql, values)
+#     sql = "SELECT * FROM cities WHERE country_id = %s"
+#     values = [country.id]
+#     results = run_sql(sql, values)
 
-    for row in results:
-        city = City(row["name"], row["country"], row["attractions"], row["temperature"], row["id"], row["visited"])
-        cities.append(city)
-    return cities
+#     for row in results:
+#         city = City(row["name"], row["country"], row["attractions"], row["temperature"], row["id"], row["visited"])
+#         cities.append(city)
+#     return cities
 
     # self.name = name
     #     self.country = country

@@ -11,42 +11,44 @@
 
 <form action="/countries/{{ country.id }}" method="post">
 
-    <div>
-      <label for="name">Country Name:</label>
-      <input type="text" id="name" name="name" value="{{country.name}}">
-    </div>
+   <div>
+     <b><label for="name">Country Name:</label></b><br>
+     <br><input type="text" id="name" name="name" value="{{country.name}}">
+   </div><br>
+  
+   <div>
+    <b><label for="population">Population:</label></b><br>
+    <br><input type="text" id="population" name="population" value="{{country.population}}">
+  </div><br>
+  
+  <div>
+    <b><label for="language">Language:</label></b><br>
+    <br><input type="text" id="language" name="language" value="{{country.language}}">
+  </div><br>
+  
+  <div>
+    <b><label for="currency">Currency:</label></b><br>
+    <br><input type="text" id="currency" name="currency" value="{{country.currency}}">
+  </div><br>
   
     <div>
-      <label for="population">Population:</label>
-      <input type="text" id="population" name="population" value="{{country.population}}">
-    </div>
+      <b><label for="geographical_area">Geographical Area:</label></b><br>
+      <br><input type="text" id="geographical_area" name="geographical_area" value="{{country.geographical_area}}">
+    </div><br>
   
     <div>
-      <label for="language">Language:</label>
-      <input type="text" id="language" name="language" value="{{country.language}}">
-    </div>
-  
-    <div>
-      <label for="currency">Currency:</label>
-      <input type="text" id="currency" name="currency" value="{{country.currency}}">
-    </div>
-  
-    <div>
-      <label for="geographical_area">Geographical Area:</label>
-      <input type="text" id="geographical_area" name="geographical_area" value="{{country.geographical_area}}">
-    </div>
-  
-    <div>
-      <label for="visited">Visited:</label>
-      <select id="visited" name="visited">
-        <option value="True">Visited</option>
-        <option value="False">Not Visited</option>
+      <b><label for="visited">Visited:</label></b><br>
+      <br><select id="visited" name="visited">
+        <option value="disabled selected">Please select an option:</option>
+        <option value="True">Yes</option>
+        <option value="False">No</option>
       </select>
-    </div>
+    </div><br>
   
   
-    <button type="submit">Update Country</button>
+    <br><button type="submit">Update Country</button>
   
   </form>
+  <br>
 
 {% endblock %}
