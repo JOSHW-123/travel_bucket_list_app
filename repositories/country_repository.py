@@ -39,7 +39,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        country = Country(row["name"], row["geographical_area"], row["population"], row["language"], row["currency"], row["id"], row["visited"])
+        country = Country(row["name"], row["geographical_area"], row["population"], row["language"], row["currency"], row["visited"], row["id"])
         countries.append(country)
     return countries
 
@@ -50,7 +50,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        country = Country(result["name"], result["geographical_area"], result["population"], result["language"], result["currency"], result["id"], result["visited"])
+        country = Country(result["name"], result["geographical_area"], result["population"], result["language"], result["currency"],  result["visited"], result["id"])
 
     return country
 
@@ -65,7 +65,8 @@ def delete(id):
 
 def update(country):
     sql = "UPDATE countries SET (name, geographical_area, population, language, currency, visited) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [country.name, country.geographical_area, country.population, country.language, country.currency, country.id, country.visited]
+    values = [country.name, country.geographical_area, country.population, country.language, country.currency, country.visited, country.id]
+    print(values)
     run_sql(sql, values)
 
 

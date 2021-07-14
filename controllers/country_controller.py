@@ -56,8 +56,8 @@ def update_country(id):
     population = request.form["population"]
     language = request.form["language"]
     currency = request.form["currency"]
-    visited = request.form["visited"]
-    country = Country(name, geographical_area, population, language, currency, id, visited)
+    visited = request.form['visited']
+    country = Country(name, geographical_area, population, language, currency, visited, id)
     country_repository.update(country)
     return redirect("/countries")
 

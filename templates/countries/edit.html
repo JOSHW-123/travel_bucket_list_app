@@ -9,7 +9,7 @@
     currency = request.form["currency"]
     visited = request.form["visited"] -->
 
-<form action="/countries/{{ country.id }}" method="post">
+<form action="/countries/{{ country.id }}" method="POST">
 
    <div>
      <b><label for="name">Country Name:</label></b><br>
@@ -39,7 +39,6 @@
     <div>
       <b><label for="visited">Visited:</label></b><br>
       <br><select id="visited" name="visited">
-        <option value="disabled selected">Please select an option:</option>
         <option value="True">Yes</option>
         <option value="False">No</option>
       </select>
