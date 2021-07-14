@@ -4,12 +4,12 @@
 
 <form action="/cities/{{city.id}}" method="post">
     <div>
-        <label for="name"> City Name:</label>
-        <input type="text" id="name" name="name" value="{{city.name}}" placeholder="Update City Name" required>
+        <label for="name"> City Name:</label><br>
+        <br><input type="text" id="name" name="name" value="{{city.name}}" placeholder="Update City Name" required>
     </div>
     <div>
-        <label for="country">Country:</label>
-        <select id="country_id" name="country_id" >
+        <br><label for="country">Country:</label><br>
+        <br><select id="country_id" name="country_id" >
           {% for country in all_countries %}
             <option value="" disabled selected hidden>Choose option</option>
             <option value="{{country.id}}">{{country.name}}</option>
@@ -17,25 +17,26 @@
         </select>
     </div>
     <div>
-        <label for="attractions"> Attractions:</label>
-        <input type="text" id="name" name="name" value="{{city.name}}" placeholder="Update City Name" required>
+        <br><label for="attractions"> Attractions:</label><br>
+        <br><input type="text" id="name" name="name" value="{{city.name}}" placeholder="Update City Name" required>
     </div>
     <div>
-        <label for="temperature">Temperature °C:</label>
-        <input type="text" id="temperature" name="temperature" value="{{city.temperature}}" placeholder="Enter temperature" required>
+        <br><label for="temperature">Temperature °C:</label><br>
+        <br><input type="text" id="temperature" name="temperature" value="{{city.temperature}}" placeholder="Enter temperature" required>
     </div>
     <div>
-        <label for="visited">Visited:</label>
-        <select id="visited" name="visited">
+        <br><label for="visited">Visited:</label><br>
+        <br><select id="visited" name="visited">
           <option value="" disabled selected hidden>Choose option</option>
           <option value="True">Yes</option>
           <option value="False">No</option>
         </select>
       </div>
       <br>
-      <button type="submit">Update City</button>
+      <button type="submit">Update City</button><br>
     
 </form>
+<br>
 
 
 {% endblock %}
