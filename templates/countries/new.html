@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div id="new-city-header">
 <h1>Lets add your country below, this will be added to your bucket list</h1>
 <p>Please make sure to fill out all the required information.</p>
+</div>
+
 
 <b><fieldset id="new-country-fieldset"></b>
     <br><b><legend>Please Enter your country information below:</legend></b>
@@ -46,6 +48,7 @@
 
 </form>
 </fieldset>
+<img id="add-country-image" src="/static/images/earth-icon.png" alt="earth-image">
 <br>
 {% endblock %}
 <!-- 

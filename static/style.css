@@ -10,7 +10,10 @@ display: grid;
 body {
   margin: 70%;
   font-family: -apple-system, Roboto, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-image: url(/static/images/white-texture-background-geometric-pattern-180126-1500x1500.jpeg); 
+  background-image: url(/static/images/Savin-NY-Website-Background-Web-1.jpeg) ;
+  background-size: 200%;
+  background-repeat: repeat-y;
+
   
   
   
@@ -155,15 +158,6 @@ margin-right: 10px;
   }
 }
 
-
-/* #home-image{
-    margin: 5px, auto;
-    max-height: 20%;
-    max-width: 20%;
-   
-
-} */
-
 html, body {
   height: 100%;
   margin: 0px;
@@ -177,7 +171,8 @@ html, body {
   margin: 0 auto;
   max-height: 75%;
   max-width: 75%;
-  border-radius: 15px;
+  border-radius: 17px;
+  
 
   
 }
@@ -315,7 +310,7 @@ html, body {
           }   
   
     #fieldset-new-city{
-    background-color: rgba(64, 79, 95, 0.242);
+    background-color: rgba(37, 114, 196, 0.153);
     margin-left: 30% ;
     border-radius:2em;
     display: inline-block;
@@ -463,5 +458,32 @@ html, body {
     border-radius:2em
   }
 
+#countries-header{
+  margin-left: 30%;
+}
+
+#add-country-image{
+  display: inline-block;
+  border-radius:1em;
+  max-height: 50%;
+  max-width: 20%;
+  /* padding:0.3em 1.2em; */
+  border-radius:2em;
+  box-sizing: border-box;
+  margin-left: 10cm;
+  margin-bottom: 10cm;
+}
+
+#new-city-header{
+  margin-left: 20%;
+}
+
+#city-new-header{
+  margin-left: 2%;
+}
+
+#list-cities-p1{
+  margin-left: 1%;
+}
 
   
