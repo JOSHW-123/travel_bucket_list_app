@@ -18,7 +18,7 @@ CREATE TABLE cities (
     name VARCHAR(255),
     attractions VARCHAR(255),
     temperature VARCHAR(255),
-    country_id INT REFERENCES countries(id),
+    country_id INT REFERENCES countries(id) ON DELETE,
     visited BOOLEAN
     
 
