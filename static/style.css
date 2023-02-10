@@ -367,6 +367,31 @@ html, body {
     }
     }
 
+    #update-country-button{
+      display:inline-block;
+      padding:0.3em 1.2em;
+      margin:0 0.3em 0.3em 0;
+      border-radius:2em;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-family:'Roboto',sans-serif;
+      font-weight:300;
+      color:#FFFFFF;
+      background-color:#4eb5f1;
+      text-align:center;
+      transition: all 0.2s;
+      }
+      #add-country-button:hover{
+      background-color:#4095c6;
+      }
+      @media all and (max-width:30em){
+       #add-country-button{
+      display:block;
+      margin:0.2em auto;
+      }
+      }
+    
+
     
     #edit-country-button{
       display:inline-block;
@@ -396,11 +421,18 @@ html, body {
     float:left; 
     display:inline-table; 
     width: 23%;
-    background-color: rgba(27, 127, 233, 0.043);
+    background-color: rgba(27, 127, 233, 0.132);
     /* margin-left: 30% ;
     margin-right: 40%; */
     border-radius:2em
     
+    }
+
+    #edit-country-fieldset{
+      background-color: rgba(27, 127, 233, 0.043);
+      margin-left: 30% ;
+      margin-right: 40%;
+      border-radius:2em
     }
 
     #list-cities-header{
@@ -485,6 +517,10 @@ html, body {
 
 #list-cities-p1{
   margin-left: 1%;
+}
+
+#flags-image{
+   border: solid grey 0.15em; 
 }
 
   

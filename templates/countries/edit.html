@@ -8,8 +8,9 @@
     language = request.form["language"]
     currency = request.form["currency"]
     visited = request.form["visited"] -->
-
-<form action="/countries/{{ country.id }}" method="POST">
+<fieldset id="edit-country-fieldset">
+  <u><b><legend>Edit Your Country Below</legend></b></u>
+<form action="/countries/{{ country.id }}" method="POST"><br>
 
    <div>
      <b><label for="name">Country Name:</label></b><br>
@@ -45,9 +46,10 @@
     </div><br>
   
   
-    <br><button type="submit">Update Country</button>
+    <br><button id="update-country-button" type="submit">Update Country</button>
   
   </form>
+</fieldset>
   <br>
 
 {% endblock %}
