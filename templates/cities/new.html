@@ -12,16 +12,21 @@
 <fieldset id="fieldset-new-city" style="width:270px">
         <br><b><legend><u>Please Add Your New City:</u></legend></b>
 <form id="form-new-city" action="/cities" method="post">
-
+     
+<!-- <div> -->
     <br><b><label for="name">Whats Your City Name?</label><br></b>
     <br><input type="text" id="name" name="name" placeholder="Please Input Your City" required><br>
-
+<!-- </div> -->
+<!-- <div> -->
     <br><b><label for="attractions">Attraction You Want To See:</label><br></b>
     <br><input type="text" id="attractions" name="attractions" placeholder="Input Attraction To Visit"><br>
-
+<!-- </div> -->
+<!-- <div> -->
     <br><b><label for="temperature">Whats the Temperature °C ?</label><br></b>
     <br><input type="text"  id="temperature" name="temperature" placeholder="Enter the Temperature"><br>
+<!-- </div> -->
 
+<!-- <div> -->
     <br><b><label for="country">Country:</label><br></b>
     <br><select name="country_id" id="country_id">
         {% for country in all_countries %}
@@ -29,7 +34,8 @@
         <option value="{{ country.id}}">{{ country.name}} </option>
         {% endfor %}
     </select><br>
-
+<!-- </div>
+<div> -->
 
     <br><b><label for="visited">Have You Visited?</label><br></b>
     <br><select name="visited" id="visited">
@@ -37,10 +43,12 @@
         <option value="True">Yes</option>
         <option value="False">No</option>
     </select><br>
-
+<!-- </div>
+<br>
+<div> -->
     <br><button id="new-city-button" type="submit">Add City</button>
     
-
+<!-- </div> -->
 
 </form>
 </fieldset>

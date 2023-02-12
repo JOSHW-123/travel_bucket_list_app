@@ -31,6 +31,17 @@ def create_city():
     city_repository.save(city)
     return redirect("/cities")
 
+# @cities_blueprint.route("/cities", methods=["POST"])
+# def create_city():
+#     name = request.form["name"]
+#     country = country_repository.select(request.form["country_id"])
+#     attractions = request.form["attractions"]
+#     temperature = request.form["temperature"]
+#     visited = request.form["visited"]
+#     city = City(name, country, attractions, temperature, id, visited)
+#     city_repository.save(city)
+#     return redirect("/cities")
+
 @cities_blueprint.route("/cities/<id>/delete", methods=["POST"])
 def delete_city(id):
     city_repository.delete(id)
