@@ -7,6 +7,7 @@ from controllers.country_controller import countries_blueprint
 app = Flask(__name__)
 app.config['FLASK_DEBUG'] = True
 
+
 app.register_blueprint(cities_blueprint)
 app.register_blueprint(countries_blueprint)
 

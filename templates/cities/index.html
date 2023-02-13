@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<h1><b>Your List Of Cities</b></h1>
-    <p>You can find all the cities you have already visited listed below, along with cities you want to visit. 
+<h1 id="list-cities-header"><b>Your List Of Cities</b></h1>
+    <p id="list-cities-p1">You can find all the cities you have already visited listed below, along with cities you want to visit. 
     </p>
 <p><b>Please feel free to add to your list at anytime</b></p>
 
@@ -11,12 +11,16 @@
 {% for city in all_cities %}
 <div class="container">
 <div class="cities">
-
+  <b><fieldset id="country-container"></b>
+    <img id="cities-list-image" src="/static/images/download.png" alt="travel">
+   <br><b><legend><u>City Information:</u></legend></b>
   <h1><br><b>{{city.name}}</h1>
-    <br><b>Country: {{city.country.name}}</h1><br>
-  <br><b>Have you visited here?</b> 
+    <b><u>Country:</u><br><br> {{city.country.name}}<br>
+  <br> <u>Have you visited here?</u> 
   <br>
-  <br>{{city.visited}}
+  <br>{{city.visited}} <br><br>
+  <br><b><u>City Temperature:</u><br><br> {{city.temperature}} <br>
+  <br><b><u>City Attraction You Want to Visit:</u><br><br> {{city.attractions}}
   
 
 <form action="/cities/{{city.id}}/delete" method="POST">
@@ -24,14 +28,21 @@
     <button id="delete-city-button" type="delete">Delete City</button>
 </form>
 <form action="/cities/{{city.id}}/edit" method="GET">
-    <button type="edit">Edit City</button>
+    <button id="edit-city-button" type="edit">Edit City</button>
 </form>
+
+
 <br>
 
+
 </div>
 </div>
 
+
 {% endfor %}
+
+</fieldset>
+
 
 
 
