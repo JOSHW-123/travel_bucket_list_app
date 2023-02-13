@@ -2,61 +2,50 @@
 
 {% block content %}
 
+<div id="city-new-header">
 <h1>Lets add your city below, this will be added to your bucket list</h1>
-<p>Please make sure to fill out all the required information.</p>
-<p>Remember to enter one attraction you want to visit</p>
-
-<form action="/cities" method="post">
-
-<div>
-    <br><b><label for="name">City Name:</label><br></b>
-    <br><input type="text" id="name" name="name" placeholder="Enter City Name" required>
+<p>Please make sure to enter all the required information below.</p>
+<p>Remember to enter one attraction you really want to visit</p><br>
 </div>
-<div>
-    <br><b><label for="attractions">Attractions:</label><br></b>
-    <br><input type="text" id="attractions" name="attractions" placeholder="Popular Attraction">
-</div>
-<div>
-    <br><b><label for="temperature">Temperature °C:</label><br></b>
-    <br><input type="text"  id="temperature" name="temperature" placeholder="Enter the Temperature">
-</div>
+<img id="city-image-new-city" src="/static/images/cities-color-pic.jpeg" alt="">
 
-<div>
+<fieldset id="fieldset-new-city" style="width:270px">
+        <br><b><legend><u>Please Add Your New City:</u></legend></b>
+<form id="form-new-city" action="/cities" method="post">
+
+    <br><b><label for="name">Whats Your City Name?</label><br></b>
+    <br><input type="text" id="name" name="name" placeholder="Please Input Your City" required><br>
+
+    <br><b><label for="attractions">Attraction You Want To See:</label><br></b>
+    <br><input type="text" id="attractions" name="attractions" placeholder="Input Attraction To Visit"><br>
+
+    <br><b><label for="temperature">Whats the Temperature °C ?</label><br></b>
+    <br><input type="text"  id="temperature" name="temperature" placeholder="Enter the Temperature"><br>
+
     <br><b><label for="country">Country:</label><br></b>
     <br><select name="country_id" id="country_id">
         {% for country in all_countries %}
         <option value="" disabled selected hidden>Select Country</option>
         <option value="{{ country.id}}">{{ country.name}} </option>
         {% endfor %}
-    </select>
-</div>
+    </select><br>
 
-<!-- <div>
-    <br><b><label for="country_id">Country:</label></b><br>
-    <br><input type="text" id="country_id" name="country_id" placeholder="Enter The Country">
-  </div> -->
-<div>
 
-    <br><b><label for="visited">Visited:</label><br></b>
+    <br><b><label for="visited">Have You Visited?</label><br></b>
     <br><select name="visited" id="visited">
         <option value="" disabled selected hidden>Please select an option:</option>
         <option value="True">Yes</option>
         <option value="False">No</option>
-    </select>
-</div>
-<br>
-<div>
-    <button type="submit">Add City</button>
+    </select><br>
+
+    <br><button id="new-city-button" type="submit">Add City</button>
     
-</div>
+
+
 </form>
+</fieldset>
+
 <br>
 
 {% endblock %}
 
-<!-- self.name = name
-        self.country = country
-        self.attractions = attractions
-        self.temperature = temperature
-        self.id = id
-        self.visited = visited -->
