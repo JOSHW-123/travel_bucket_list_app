@@ -4,46 +4,45 @@
 <div id="new-city-header">
 <h1>Lets add your country below, this will be added to your bucket list</h1>
 <p>Please make sure to fill out all the required information.</p>
-</div>
-
 
 <b><fieldset id="new-country-fieldset"></b>
     <br><b><legend>Please Enter your country information below:</legend></b>
 
 <form action="/countries" method="post">
 
-<!-- <div> -->
+<div>
     <br><b><label for="name">Country Name:</label></b><br>
-    <br><input type="text" id="description" name="name" placeholder="Enter Country Name" required><br>
-<!-- </div>
-<div> -->
+    <br><input type="text" id="description" name="name" placeholder="Enter Country Name" required>
+</div>
+<div>
     <br><b><label for="geographical_area">Geographical Area:</label></b><br>
-    <br><input type="text" id="geographical_area" name="geographical_area" placeholder="Location Of Country"><br>
-<!-- </div>
-<div> -->
+    <br><input type="text" id="geographical_area" name="geographical_area" placeholder="Location Of Country">
+</div>
+<div>
     <br><b><label for="population">Population:</label></b><br>
-    <br><input type="text"  id="population" name="population" placeholder="Please Enter Population"><br>
-<!-- </div>
-<div> -->
+    <br><input type="text"  id="population" name="population" placeholder="Please Enter Population">
+</div>
+<div>
     <br><b><label for="language">Language:</label></b><br>
-    <br><input type="text" id="language" name="language" placeholder="Enter Language Spoken"><br>
-<!-- </div>
-<div> -->
+    <br><input type="text" id="language" name="language" placeholder="Enter Language Spoken">
+</div>
+<div>
         <br><b><label for="currency">Currency:</label></b><br>
-        <br><input type="text" id="currency" name="currency" placeholder="Enter Currency Used"><br>
-<!-- </div>
-<div> -->
+        <br><input type="text" id="currency" name="currency" placeholder="Enter Currency Used">
+</div>
+<div>
     <br><b><label for="visited">Have You Visited?</label></b><br>
+    <br>
     <br><select name="visited" id="visited">
         <option value="disabled selected">Please select an option:</option>
         <option value="True">Yes</option>
         <option value="False">No</option>
-    </select><br>
-<!-- </div> -->
+    </select>
+</div>
 <br>
-<!-- <div> -->
-    <button id="add-country-button" type="submit">Add Country</button>
-<!-- </div> -->
+<div>
+    <button type="submit">Add Country</button>
+</div>
 
 
 </form>
