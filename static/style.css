@@ -1,196 +1,223 @@
-footer{
-  margin-top:30%;
-  display: grid;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 70%;
-    font-family: -apple-system, Roboto, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image: url(/static/images/Savin-NY-Website-Background-Web-1.jpeg) ;
-    background-size: 200%;
-    background-repeat: repeat-y;
-  
-    
-    
-    
-  }
-  
-  .nav {
-    height: 50px;
-    width: 100%;
-    background-color: rgba(70, 126, 188);
-    position: relative;
-  }
-  
-  /* .nav > .nav-header {
-    display: inline;
-  } */
-  
-  /* .nav > .nav-header > .nav-title {
-    display: inline-block;
-    font-size: 22px;
-    color: #fff;
-    font-weight: 550;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px 10px 10px 10px;
-  } */
-  
-  /* .nav > .nav-btn {
-    display: none;
-  } */
-  
-  /* .nav > .nav-links {
-    display: inline;
-    float: right;
-    font-size: 18px;
-  } */
-  /* .nav > .nav-links > ul li a{
-    display: block;
-    padding: 0 8px;
-    color: #fff;
-    line-height: 40px;
-    font-size: 18px;
-    text-decoration: none;
-  
-  } */
-  /* .nav > .nav-links > ul{
-    padding: 0;
-    margin-top: 5px;
-    list-style: none;
-    position: relative;
-  
-  } */
-  /* .nav > .nav-links > ul li{
-    display: inline-block;
-    background-color: rgba(70, 126, 188);;
-  
-  
-  } */
-  /* .nav > .nav-links > ul li:hover{
-      background-color: rgb(83, 146, 219);;
-      border-radius: 5px;
-  } */
-  
-  /* .nav > #nav-check {
-    display: none;
-  } */
-  
-  /* .nav .nav-links ul a.icon{
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 70%;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url(../static/images/Savin-NY-Website-Background-Web-1.jpeg);
+  background-size: 200%;
+  background-repeat: repeat-y;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(70, 126, 188);
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 550;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  padding: 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > ul {
+  padding: 0;
+  margin-top: 5px;
+  list-style: none;
+  position: relative;
+}
+
+.nav > .nav-links > ul li {
+  display: inline-block;
+  background-color: rgba(70, 126, 188);
+}
+
+.nav > .nav-links > ul li:hover {
+  background-color: rgb(83, 146, 219);
+  border-radius: 5px;
+}
+
+.nav > .nav-links > ul li a {
+  display: block;
+  padding: 0 8px;
+  color: #fff;
+  line-height: 40px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav > .nav-links > ul li a.icon {
   margin-left: 80px;
   margin-right: 10px;
-  } */
-  
-  /* .nav .nav-links ul a i{
-    background-color: #fff;
-    border-radius: 50px;
-    padding: 7px;
-    margin-left: 5px;
-  } */
-  
-  
-  /* @media (max-width:750px) {
-    .nav > .nav-btn {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    } */
-    /* .nav > .nav-btn > label {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      padding: 13px;
-    } */
-    /* .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
-    } */
-    /* .nav > .nav-btn > label > span {
-      display: block;
-      width: 25px;
-      height: 10px;
-      border-top: 2px solid #eee;
-    } */
-    /* .nav > .nav-links {
-      position: absolute;
-      display: block;
-      width: 100%;
-      background-color: #333;
-      height: 0px;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      top: 50px;
-      left: 0px;
-    } */
-    /* .nav > .nav-links > ul li a {
-      display: block;
-      width: 100%;
-    } */
-  
-    /*   */
-  
-  
-  
-      /* .nav > .nav-links > ul li{
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-        background-color: #333; */
-  
-      /* }
-      .nav > .nav-links > ul li a{
-          margin-left: 40%;
-      } */
-      /* .nav .nav-links ul a.icon{
-        margin-left: 33%;
-      } */
-  
-    /*   */
-    /* .nav > #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
-    } */
-    /* .nav > #nav-check:checked ~ .nav-links {
-      height: calc(100vh - 50px);
-      overflow-y: auto;
-    } */
-  
-  
-  html, body {
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    border: 1px;
+}
+
+.nav > .nav-links > ul li a i {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 7px;
+  margin-left: 5px;
+}
+
+.nav > #nav-check {
+  display: none;
+
+}
+
+.nav .nav-links ul a.icon{
+margin-left: 80px;
+margin-right: 10px;
+}
+
+.nav .nav-links ul a i{
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 7px;
+  margin-left: 5px;
+}
+
+
+@media (max-width:750px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
   }
-  
-  #home-image{
-    padding: 0;
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
     display: block;
-    margin: 0 auto;
-    max-height: 75%;
-    max-width: 75%;
-    border-radius: 17px;
-    
-    
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  /*   */
+
+
+
+    .nav > .nav-links > ul li{
+      display: block;
+      margin-bottom: 20px;
+      padding: 0;
+      background-color: #333;
+
+    }
+    .nav > .nav-links > ul li a{
+        margin-left: 40%;
+    }
+    .nav .nav-links ul a.icon{
+      margin-left: 33%;
+    }
+
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: 1px;
+}
+
+#home-image{
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 75%;
+  max-width: 75%;
+  border-radius: 17px;
+
+}
+
+#logo{
+  margin-left: 28%;
+  border-radius: 1em;
+  border: solid rgb(139, 153, 189);
   
-    
+}
+
+#new-logo{
+  height: 40px;
+  
+}
+
+
+#delete-city-button{
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#4eb5f1;
+  text-align:center;
+  transition: all 0.2s;
   }
   
-  #logo{
-    margin-left: 28%;
-    border-radius: 1em;
-    border: solid rgb(139, 153, 189);
-    
+  #delete-city-button:hover{
+  background-color:#4095c6;
   }
-  
-  #new-logo{
-    height: 40px;
-    
+
+  @media all and (max-width:30em){
+   #delete-city-button{
+  display:block;
+  margin:0.2em auto;
   }
-  
-  #delete-city-button{
+  }
+
+  #edit-city-button{
     display:inline-block;
     padding:0.3em 1.2em;
     margin:0 0.3em 0.3em 0;
@@ -204,17 +231,17 @@ footer{
     text-align:center;
     transition: all 0.2s;
     }
-    #delete-city-button:hover{
+    #edit-city-button:hover{
     background-color:#4095c6;
     }
     @media all and (max-width:30em){
-     #delete-city-button{
+     #edit-city-button{
     display:block;
     margin:0.2em auto;
     }
     }
-  
-    #edit-city-button{
+
+    #countries-delete-button{
       display:inline-block;
       padding:0.3em 1.2em;
       margin:0 0.3em 0.3em 0;
@@ -228,17 +255,17 @@ footer{
       text-align:center;
       transition: all 0.2s;
       }
-      #edit-city-button:hover{
+      #countries-delete-button:hover{
       background-color:#4095c6;
       }
       @media all and (max-width:30em){
-       #edit-city-button{
+       #countries-delete-button{
       display:block;
       margin:0.2em auto;
       }
       }
-  
-      #countries-delete-button{
+
+      #countries-edit-button{
         display:inline-block;
         padding:0.3em 1.2em;
         margin:0 0.3em 0.3em 0;
@@ -252,17 +279,17 @@ footer{
         text-align:center;
         transition: all 0.2s;
         }
-        #countries-delete-button:hover{
+        #countries-edit-button:hover{
         background-color:#4095c6;
         }
         @media all and (max-width:30em){
-         #countries-delete-button{
+         #countries-edit-button{
         display:block;
         margin:0.2em auto;
         }
-        }
-  
-        #countries-edit-button{
+        }    
+    
+          #new-city-button{
           display:inline-block;
           padding:0.3em 1.2em;
           margin:0 0.3em 0.3em 0;
@@ -276,74 +303,67 @@ footer{
           text-align:center;
           transition: all 0.2s;
           }
-          #countries-edit-button:hover{
+          #new-city-button:hover{
           background-color:#4095c6;
           }
           @media all and (max-width:30em){
-           #countries-edit-button{
+           #new-city-button{
           display:block;
           margin:0.2em auto;
           }
-          }    
-      
-            #new-city-button{
-            display:inline-block;
-            padding:0.3em 1.2em;
-            margin:0 0.3em 0.3em 0;
-            border-radius:2em;
-            box-sizing: border-box;
-            text-decoration:none;
-            font-family:'Roboto',sans-serif;
-            font-weight:300;
-            color:#FFFFFF;
-            background-color:#4eb5f1;
-            text-align:center;
-            transition: all 0.2s;
-            }
-            #new-city-button:hover{
-            background-color:#4095c6;
-            }
-            @media all and (max-width:30em){
-             #new-city-button{
-            display:block;
-            margin:0.2em auto;
-            }
-            }   
-    
-      #fieldset-new-city{
-      background-color: rgba(37, 114, 196, 0.153);
-      margin-left: 30% ;
-      border-radius:2em;
-      display: inline-block;
-      border-radius:1em;
-      max-height: 50%;
-      max-width: 50%;
-      padding:0.3em 1.2em;
-      margin:0 0.3em 0.3em 0;
+          }   
+  
+    #fieldset-new-city{
+    background-color: rgba(37, 114, 196, 0.153);
+    margin-left: 30% ;
+    border-radius:2em;
+    display: inline-block;
+    border-radius:1em;
+    max-height: 50%;
+    max-width: 50%;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+  }
+
+  #form-new-city{
+    color: rgb(10, 10, 10);
+
+  }
+
+  #new-country-fieldset{
+    background-color: rgba(27, 127, 233, 0.043);
+    margin-left: 30% ;
+    margin-right: 40%;
+    border-radius:2em
+  }
+
+  
+
+  #add-country-button{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
     }
-  
-    /* #country-header{
-      background-color: rgba(27, 127, 233, 0.043);
-      margin-left: 30% ;
-      margin-right: 40%;
-      border-radius:2em; */
-    /* } */
-  
-    #form-new-city{
-      color: rgb(10, 10, 10);
-  
+    #add-country-button:hover{
+    background-color:#4095c6;
     }
-  
-    #new-country-fieldset{
-      background-color: rgba(27, 127, 233, 0.043);
-      margin-left: 30% ;
-      margin-right: 40%;
-      border-radius:2em
+    @media all and (max-width:30em){
+     #add-country-button{
+    display:block;
+    margin:0.2em auto;
     }
-  
-    
-  
-    #add-country-button{
+    }
+
+    #update-country-button{
       display:inline-block;
       padding:0.3em 1.2em;
       margin:0 0.3em 0.3em 0;
@@ -361,130 +381,84 @@ footer{
       background-color:#4095c6;
       }
       @media all and (max-width:30em){
-       #add-country-button{
+      #add-country-button{
       display:block;
       margin:0.2em auto;
       }
       }
-  
-      
-      #edit-country-button{
-        display:inline-block;
-        padding:0.3em 1.2em;
-        margin:0 0.3em 0.3em 0;
-        border-radius:2em;
-        box-sizing: border-box;
-        text-decoration:none;
-        font-family:'Roboto',sans-serif;
-        font-weight:300;
-        color:#FFFFFF;
-        background-color:#4eb5f1;
-        text-align:center;
-        transition: all 0.2s;
-        }
-        #edit-country-button:hover{
-        background-color:#4095c6;
-        }
-        @media all and (max-width:30em){
-         #edit-country-button{
-        display:block;
-        margin:0.2em auto;
-        }
-        }
-  
-      #country-container{
-      float:left; 
-      display:inline-table; 
-      width: 23%;
-      background-color: rgba(27, 127, 233, 0.043);
-      /* margin-left: 30% ;
-      margin-right: 40%; */
-      border-radius:2em
-      
-      }
-  
-      #list-cities-header{
-        margin-left: 35%;
-      }
-  
-      #list-cities-p1{
-        margin-left: 30%;
-      }
-  
-      #cities-list-image{
-        margin-top: 5px;
-        display: inline-block;
-        border-radius:3em;
-      }
-  
-      input[type=text] {
-        border: 1px solid rgba(34, 59, 199, 0.527);
-        border-bottom: 2px solid rgba(34, 59, 199, 0.527);
-        border-radius: 0.5em;
-      }
-  
-      #countries-list-container{
-      float:left; 
-      display:inline-table; 
-      width: 20%;
-      background-color: rgba(27, 127, 233, 0.043);
-      border-radius:2em;
-      padding:0.3em 1.2em; 
     
-      }
-  
-      #flags-image{
-        margin-top: 5px;
-        display: inline-block;
-        border-radius:1em;
-        max-height: 50%;
-        max-width: 50%;
+
+    #country-container{
+    float:left; 
+    display:inline-table; 
+    width: 23%;
+    background-color: rgba(27, 127, 233, 0.132);
+    border-radius:2em
+    
     }
-  
-    #city-image-new-city{
-        
-        display: inline-block;
-        border-radius:1em;
-        max-height: 70%;
-        max-width: 70%;
-        padding:0.3em 1.2em;
-        border-radius:2em;
-        box-sizing: border-box;
-    }
-  
-    #country-edit{
+
+    #edit-country-fieldset{
       background-color: rgba(27, 127, 233, 0.043);
       margin-left: 30% ;
       margin-right: 40%;
       border-radius:2em
     }
-  
-  #countries-header{
-    margin-left: 30%;
-  }
-  
-  #add-country-image{
-    display: inline-block;
-    border-radius:1em;
-    max-height: 50%;
-    max-width: 20%;
-    /* padding:0.3em 1.2em; */
+
+    #list-cities-header{
+      margin-left: 35%;
+    }
+
+    #list-cities-p1{
+      margin-left: 30%;
+    }
+
+    #cities-list-image{
+      margin-top: 5px;
+      display: inline-block;
+      border-radius:3em;
+    }
+
+    input[type=text] {
+      border: 1px solid rgba(34, 59, 199, 0.527);
+      border-bottom: 2px solid rgba(34, 59, 199, 0.527);
+      border-radius: 0.5em;
+    }
+
+    #countries-list-container{
+    float:left; 
+    display:inline-table; 
+    width: 20%;
+    background-color: rgba(27, 127, 233, 0.043);
     border-radius:2em;
-    box-sizing: border-box;
-    margin-left: 10cm;
-    margin-bottom: 10cm;
+    padding:0.3em 1.2em; 
+
+    }
+
+    #flags-image{
+      margin-top: 5px;
+      display: inline-block;
+      border-radius:1em;
+      max-height: 50%;
+      max-width: 50%;
   }
-  
-  #new-city-header{
-    margin-left: 20%;
+
+  #city-image-new-city{
+      
+      display: inline-block;
+      border-radius:1em;
+      max-height: 70%;
+      max-width: 70%;
+      padding:0.3em 1.2em;
+      border-radius:2em;
+      box-sizing: border-box;
   }
-  
-  #city-new-header{
-    margin-left: 2%;
+
+  #country-edit{
+    background-color: rgba(27, 127, 233, 0.043);
+    margin-left: 30% ;
+    margin-right: 40%;
+    border-radius:2em
   }
+
+
   
-  #list-cities-p1{
-    margin-left: 1%;
-  }
-  
-    

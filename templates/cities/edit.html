@@ -3,47 +3,37 @@
 {% block content %}
 
 <form action="/cities/{{city.id}}" method="post">
-    <div>
-        <label for="name"> City Name:</label><br>
-        <br><input type="text" id="name" name="name" value="{{city.name}}" placeholder="Update City Name" required>
-    </div>
-    <div>
-        <br><label for="country">Country:</label><br>
-        <br><select id="country_id" name="country_id" >
-          {% for country in all_countries %}
-            <option value="" disabled selected hidden>Choose option</option>
-            <option value="{{country.id}}">{{country.name}}</option>
-          {% endfor %}
-        </select>
-    </div>
-    <div>
-        <br><label for="attractions"> Attractions:</label><br>
-        <br><input type="text" id="name" name="name" value="{{city.name}}" placeholder="Update City Name" required>
-    </div>
-    <div>
-        <br><label for="temperature">Temperature °C:</label><br>
-        <br><input type="text" id="temperature" name="temperature" value="{{city.temperature}}" placeholder="Enter temperature" required>
-    </div>
-    <div>
-        <br><label for="visited">Visited:</label><br>
-        <br><select id="visited" name="visited">
-          <option value="" disabled selected hidden>Choose option</option>
-          <option value="True">Yes</option>
-          <option value="False">No</option>
-        </select>
-      </div>
-      <br>
-      <button type="submit">Update City</button><br>
-    
+  <div>
+    <label for="name">City Name:</label><br>
+    <input type="text" id="name" name="name" value="{{city.name}}" placeholder="Update City Name" required>
+  </div>
+  <div>
+    <label for="country">Country:</label><br>
+    <select id="country_id" name="country_id" >
+      {% for country in all_countries %}
+        <option value="" disabled selected hidden>Choose option</option>
+        <option value="{{country.id}}">{{country.name}}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div>
+    <label for="attractions"> Attractions:</label><br>
+    <input type="text" id="attractions" name="attractions" value="{{city.name}}" placeholder="Update City Name" required>
+  </div>
+  <div>
+    <label for="temperature">Temperature °C:</label><br>
+    <input type="text" id="temperature" name="temperature" value="{{city.temperature}}" placeholder="Enter temperature" required>
+  </div>
+  <div>
+    <label for="visited">Visited:</label><br>
+    <select id="visited" name="visited">
+      <option value="" disabled selected hidden>Choose option</option>
+      <option value="True">Yes</option>
+      <option value="False">No</option>
+    </select>
+  </div>
+  <br>
+  <button type="submit">Update City</button>
 </form>
-<br>
-
 
 {% endblock %}
-
- <!-- self.name = name
-        self.country = country
-        self.attractions = attractions
-        self.temperature = temperature
-        self.id = id
-        self.visited = visited -->
